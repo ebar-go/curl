@@ -23,6 +23,8 @@ type Curl interface {
 	PostFile(url string, files map[string]string, params map[string]string) (Response, error)
 	// send http request
 	Send(request *http.Request) (Response, error)
+	// send post json request
+	PostJson(url string, body io.Reader) (Response, error)
 }
 
 // Response
